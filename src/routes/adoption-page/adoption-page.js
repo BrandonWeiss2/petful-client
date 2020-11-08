@@ -178,7 +178,6 @@ export default class AdoptionPage extends Component {
             <span>{this.state.message}</span>
             <button onClick={this.hanldeContinue}>Continue</button>
           </div>
-
           }
         </div>
         {this.state.name === '' &&
@@ -199,3 +198,5 @@ export default class AdoptionPage extends Component {
     )
   }
 }
+
+//
