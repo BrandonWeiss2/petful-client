@@ -1,0 +1,22 @@
+.animalDiv, .form {
+  display: flex;
+  justify-content: center;
+}
+
+.animal-pic {
+  margin: 0 auto 0 auto;
+}
+
+.form {
+  flex-direction: column;
+  text-align: center;
+}
+
+.title, h2, .queue {
+  text-align: center;
+}
+
+.dog, .cat {
+  flex: 1;
+}
+

@@ -1,0 +1,12 @@
+body {
+  background-color: lightblue;
+}
+
+.linkDiv {
+  text-align: center;
+}
+
+.link {
+  background-color: lightcoral;
+  border: 3px solid black;
+}
