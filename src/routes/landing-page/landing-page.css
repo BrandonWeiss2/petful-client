@@ -10,3 +10,9 @@ body {
   background-color: lightcoral;
   border: 3px solid black;
 }
+
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

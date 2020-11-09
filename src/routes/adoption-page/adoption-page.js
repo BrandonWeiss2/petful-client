@@ -34,7 +34,6 @@ export default class AdoptionPage extends Component {
     AdoptionApiService.deletePets('cat')
       .then(this.updateStateAnimals)
       .then(this.updateStateName(''))
-      .then(this.startQueueUpdate())
   }
 
   handleAdoptDog = () => {
@@ -44,7 +43,6 @@ export default class AdoptionPage extends Component {
     AdoptionApiService.deletePets('Dog')
       .then(this.updateStateAnimals)
       .then(this.updateStateName(''))
-      .then(this.startQueueUpdate())
   }
 
   handleAdoptBoth = () => {
@@ -54,7 +52,6 @@ export default class AdoptionPage extends Component {
     AdoptionApiService.deletePets('Both')
       .then(this.updateStateAnimals)
       .then(this.updateStateName(''))
-      .then(this.startQueueUpdate())
   }
 
   handleAdoptNone = () => {
@@ -62,11 +59,10 @@ export default class AdoptionPage extends Component {
       message: `You did not adopt a pet`
     })
     this.updateStateName('')
-    this.startQueueUpdate()
   }
 
   startQueueUpdate = () => {
-    this.intervalId = setInterval(this.queueUpdate, 500)
+    this.intervalId = setInterval(this.queueUpdate, 5000)
   }
 
   queueUpdate = (type) => {
