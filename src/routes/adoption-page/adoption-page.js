@@ -67,7 +67,7 @@ export default class AdoptionPage extends Component {
   }
 
   startQueueUpdate = () => {
-    this.intervalId = setInterval(this.queueUpdate, 500)
+    this.intervalId = setInterval(this.queueUpdate, 5000)
   }
 
   queueUpdate = (type) => {
