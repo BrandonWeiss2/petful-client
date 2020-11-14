@@ -66,7 +66,7 @@ export default class AdoptionPage extends Component {
     })
     this.updateStateName('')
     clearInterval(this.intervalId)
-    .then(this.state.queue.shift())
+    this.state.queue.shift()
   }
 
   startQueueUpdate = () => {
