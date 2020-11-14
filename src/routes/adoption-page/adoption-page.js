@@ -24,6 +24,7 @@ export default class AdoptionPage extends Component {
   hanldeContinue = () => {
     this.setState({
       message: '',
+      name: '',
     })
   }
 
@@ -33,7 +34,6 @@ export default class AdoptionPage extends Component {
     })
     AdoptionApiService.deletePets('cat')
       .then(this.updateStateAnimals)
-      .then(this.updateStateName(''))
       .then(clearInterval(this.intervalId))
       .then(this.state.queue.shift())
   }
@@ -44,7 +44,6 @@ export default class AdoptionPage extends Component {
     })
     AdoptionApiService.deletePets('Dog')
       .then(this.updateStateAnimals)
-      .then(this.updateStateName(''))
       .then(clearInterval(this.intervalId))
       .then(this.state.queue.shift())
   }
@@ -55,7 +54,6 @@ export default class AdoptionPage extends Component {
     })
     AdoptionApiService.deletePets('Both')
       .then(this.updateStateAnimals)
-      .then(this.updateStateName(''))
       .then(clearInterval(this.intervalId))
       .then(this.state.queue.shift())
   }
@@ -64,7 +62,6 @@ export default class AdoptionPage extends Component {
     this.setState({
       message: `You did not adopt a pet`
     })
-    this.updateStateName('')
     clearInterval(this.intervalId)
     this.state.queue.shift()
   }
