@@ -35,7 +35,7 @@ export default class AdoptionPage extends Component {
       .then(this.updateStateAnimals)
       .then(this.updateStateName(''))
       .then(clearInterval(this.intervalId))
-      .then(this.state.queue.slice(1))
+      .then(this.state.queue.shift())
   }
 
   handleAdoptDog = () => {
@@ -46,7 +46,7 @@ export default class AdoptionPage extends Component {
       .then(this.updateStateAnimals)
       .then(this.updateStateName(''))
       .then(clearInterval(this.intervalId))
-      .then(this.state.queue.slice(1))
+      .then(this.state.queue.shift())
   }
 
   handleAdoptBoth = () => {
@@ -57,7 +57,7 @@ export default class AdoptionPage extends Component {
       .then(this.updateStateAnimals)
       .then(this.updateStateName(''))
       .then(clearInterval(this.intervalId))
-      .then(this.state.queue.slice(1))
+      .then(this.state.queue.shift())
   }
 
   handleAdoptNone = () => {
@@ -66,7 +66,7 @@ export default class AdoptionPage extends Component {
     })
     this.updateStateName('')
     clearInterval(this.intervalId)
-    .then(this.state.queue.slice(1))
+    .then(this.state.queue.shift())
   }
 
   startQueueUpdate = () => {
